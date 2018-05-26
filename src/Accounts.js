@@ -10,9 +10,9 @@ class Accounts extends Component {
   }
 
   render() {
-    const { Accounts } = this.props;
+    const { accounts } = this.props;
     return (
-      <section className="Accounts">{map(Accounts, (Account, key) => <Account key={key} {...account} />)}</section>
+      <section className="Accounts">{map(accounts, (account, key) => <Account key={key} {...account} />)}</section>
     );
   }
 }

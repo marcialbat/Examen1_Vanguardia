@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { object } from 'prop-types';
 import './NewAccount.css';
-import { databse } from './firebase';
+import { database } from './firebase';
 
 class NewAccount extends Component {
   state = {
     name: ''
   };
 
-  accountsRef = databse.ref('/accounts');
+  accountsRef = database.ref('/accounts');
 
   handleSubmit = event => {
     event.preventDefault();
@@ -35,8 +35,8 @@ class NewAccount extends Component {
   }
 }
 
-NewAccounts.propTypes = {
+NewAccount.propTypes = {
   accountsRef: object
 };
 
-export default NewAccounts;
+export default NewAccount;
